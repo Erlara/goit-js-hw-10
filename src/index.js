@@ -23,7 +23,7 @@ searchBox.addEventListener('input', debounce(onSearchCountry, DEBOUNCE_DELAY));
             .then(renderCountryCard)
             .catch(error => {
                 emptyInput();
-                Notiflix.Notify.info('Oops, there is no country with that name.');
+                Notiflix.Notify.failure('Oops, there is no country with that name.');
             });   
 }
 
